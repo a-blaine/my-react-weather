@@ -5,17 +5,17 @@ function App() {
   return (
     <div className="App">
       <Weather />
-      <div class="footer">
+      <footer>
         This project was created by Ashley Blaine and is{" "}
         <a
-          href="https://github.com/a-blaine/react-weather"
+          href="https://github.com/a-blaine/my-react-weather"
           target="_blank"
           rel="noreferrer noopener"
         >
           open sourced
         </a>{" "}
         on GitHub
-      </div>
+      </footer>
     </div>
   );
 }
