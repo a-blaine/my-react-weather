@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Weather.css";
 import axios from "axios";
+import SyncLoader from "react-spinners/SyncLoader";
 
 <div></div>;
 
@@ -43,7 +44,7 @@ export default function Weather({ defaultCity }) {
             </div>
           </div>
         </form>
-        <h1>{city}</h1>
+        <h1>{weatherData.city}</h1>
         <ul>
           <li>{weatherData.date}</li>
           <li className="text-capitalize">{weatherData.description}</li>
@@ -74,6 +75,18 @@ export default function Weather({ defaultCity }) {
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${defaultCity}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(showWeather);
 
-    return "Loading...";
+    return (
+      <div className="d-flex">
+        <div className="loader">
+          <SyncLoader
+            color={"black"}
+            loading={true}
+            size={20}
+            aria-label="Loading Spinner"
+            data-testid="loader"
+          />
+        </div>
+      </div>
+    );
   }
 }

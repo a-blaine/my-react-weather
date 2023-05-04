@@ -45,3 +45,8 @@
   top: -34px;
   margin-left: 4px;
 }
+
+.loader {
+  margin: 40px auto;
+  display: block;
+}
