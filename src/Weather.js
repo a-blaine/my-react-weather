@@ -14,6 +14,7 @@ export default function Weather() {
               type="search"
               placeholder="Enter a city..."
               autoFocus="off"
+              autoComplete="off"
               className="form-control"
             />
           </div>
@@ -31,15 +32,20 @@ export default function Weather() {
         <li>Thursday 13:00</li>
         <li>Mostly Cloudy</li>
       </ul>
-      <div className="row">
-        <div className="col-6">
-          <img
-            src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
-            alt="Mostly cloudy"
-            className="d-inline-flex align-items-center"
-          />
-          <span className="temperature">13</span>
-          <span className="units"> °C | °F</span>
+      <div className="row mt-3">
+        <div className="col-6 ">
+          <div className="d-flex">
+            <div>
+              <img
+                src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+                alt="Mostly cloudy"
+              />
+            </div>
+            <div>
+              <span className="temperature">13</span>
+              <span className="units"> °C | °F</span>
+            </div>
+          </div>
         </div>
         <div className="col-6">
           <ul>

@@ -2,7 +2,6 @@
   border: 1px solid #dadde1;
   color: rgb(135, 135, 135);
   font-family: arial, sans-serif;
-
   border-radius: 4px;
   padding: 16px;
   margin: 30px auto;
@@ -27,6 +26,13 @@
   line-height: 19px;
 }
 
+.Weather img {
+  height: 64px;
+  width: 64px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
 .Weather .temperature {
   font-size: 64px;
   line-height: 64px;
@@ -37,7 +43,5 @@
 .Weather .units {
   position: relative;
   top: -34px;
-}
-
-.Weather img {
+  margin-left: 4px;
 }
