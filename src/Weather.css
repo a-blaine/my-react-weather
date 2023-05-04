@@ -1,0 +1,28 @@
+.Weather {
+  border: 1px solid #252525;
+  width: 600px;
+  border-radius: 6px;
+  padding: 10px;
+}
+
+.Weather form {
+  margin-bottom: 10px;
+}
+
+.Weather ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.Weather .temperature {
+  font-size: 64px;
+}
+
+.Weather .units {
+  position: relative;
+  top: -34px;
+}
+
+.Weather img {
+}
