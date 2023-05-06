@@ -77,7 +77,7 @@ export default function Weather({ defaultCity }) {
 
     return (
       <div className="d-flex">
-        <div className="loader">
+        <div className="sync-loader">
           <SyncLoader
             color={"black"}
             loading={true}
