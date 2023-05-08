@@ -2,9 +2,7 @@ import React, { useState } from "react";
 import "./Weather.css";
 import axios from "axios";
 import SyncLoader from "react-spinners/SyncLoader";
-import FormattedDate from "./FormattedDate";
-
-<div></div>;
+import WeatherInfo from "./WeatherInfo";
 
 export default function Weather({ defaultCity }) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -45,32 +43,7 @@ export default function Weather({ defaultCity }) {
             </div>
           </div>
         </form>
-        <h1>{weatherData.city}</h1>
-        <ul>
-          <li>
-            <FormattedDate date={weatherData.date} />
-          </li>
-          <li className="text-capitalize">{weatherData.description}</li>
-        </ul>
-        <div className="row mt-3">
-          <div className="col-6 ">
-            <div className="d-flex">
-              <div>
-                <img src={weatherData.iconUrl} alt={weatherData.description} />
-              </div>
-              <div>
-                <span className="temperature">{weatherData.temperature}</span>
-                <span className="units"> °C | °F</span>
-              </div>
-            </div>
-          </div>
-          <div className="col-6">
-            <ul>
-              <li>Humidity: {weatherData.humidity}%</li>
-              <li>Wind: {weatherData.wind}km/h</li>
-            </ul>
-          </div>
-        </div>
+        <WeatherInfo data={weatherData} />
       </div>
     );
   } else {
