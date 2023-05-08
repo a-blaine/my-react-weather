@@ -8,6 +8,7 @@ import WeatherForecast from "./WeatherForecast";
 export default function Weather({ defaultCity }) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(defaultCity);
+
   function handleResponse(response) {
     setWeatherData({
       ready: true,
@@ -18,6 +19,7 @@ export default function Weather({ defaultCity }) {
       wind: Math.round(response.data.wind.speed),
       humidity: response.data.main.humidity,
       icon: response.data.weather[0].icon,
+      coordinates: response.data.coord,
     });
   }
 
@@ -61,7 +63,7 @@ export default function Weather({ defaultCity }) {
           </div>
         </form>
         <WeatherInfo data={weatherData} />
-        <WeatherForecast />
+        <WeatherForecast coordinates={weatherData.coordinates} />
       </div>
     );
   } else {
