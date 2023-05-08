@@ -2,17 +2,18 @@ import React, { useState } from "react";
 import "./Weather.css";
 import axios from "axios";
 import SyncLoader from "react-spinners/SyncLoader";
+import FormattedDate from "./FormattedDate";
 
 <div></div>;
 
 export default function Weather({ defaultCity }) {
   const [weatherData, setWeatherData] = useState({ ready: false });
 
-  function showWeather(response) {
+  function handleResponse(response) {
     setWeatherData({
       ready: true,
       city: response.data.name,
-      date: "Thursday 13:00",
+      date: new Date(response.data.dt * 1000),
       description: response.data.weather[0].description,
       temperature: Math.round(response.data.main.temp),
       wind: response.data.wind.speed,
@@ -46,7 +47,9 @@ export default function Weather({ defaultCity }) {
         </form>
         <h1>{weatherData.city}</h1>
         <ul>
-          <li>{weatherData.date}</li>
+          <li>
+            <FormattedDate date={weatherData.date} />
+          </li>
           <li className="text-capitalize">{weatherData.description}</li>
         </ul>
         <div className="row mt-3">
@@ -71,9 +74,9 @@ export default function Weather({ defaultCity }) {
       </div>
     );
   } else {
-    const apiKey = "b6a665e3f83ec547fffce7205be8c2d2";
+    const apiKey = "7ae5e58d29dbe83f5367ad389e4a99a2";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${defaultCity}&appid=${apiKey}&units=metric`;
-    axios.get(apiUrl).then(showWeather);
+    axios.get(apiUrl).then(handleResponse);
 
     return (
       <div className="d-flex">

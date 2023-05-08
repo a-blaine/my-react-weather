@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
       <div className="container">
-        <Weather defaultCity="Ilsan" />
+        <Weather defaultCity="Ulsan" />
         <footer>
           This project was created by Ashley Blaine and is{" "}
           <a
