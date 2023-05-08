@@ -26,7 +26,7 @@ export default function WeatherInfo({ data }) {
         <div className="col-6">
           <ul>
             <li>Humidity: {data.humidity}%</li>
-            <li>Wind: {data.wind}km/h</li>
+            <li>Wind: {Math.round(data.wind)} km/h</li>
           </ul>
         </div>
       </div>
