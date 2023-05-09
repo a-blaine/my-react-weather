@@ -2,6 +2,11 @@
   text-align: center;
 }
 
+.WeatherForecast canvas {
+  display: block;
+  margin: 10px auto;
+}
+
 .WeatherForecast .Forecast-temp-min {
   opacity: 0.6;
   margin-left: 3px;
