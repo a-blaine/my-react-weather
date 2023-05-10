@@ -1,5 +1,6 @@
 .WeatherForecast {
   text-align: center;
+  background: pink;
 }
 
 .WeatherForecast canvas {
