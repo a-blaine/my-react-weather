@@ -1,1 +1,6 @@
-
+body {
+  background: url("./assets/backgroundVideo.mp4");
+  background-repeat: no-repeat;
+  background-position: fixed;
+  object-fit: cover;
+}
