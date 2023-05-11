@@ -1,4 +1,4 @@
-.Background-video video {
+.App video {
   position: fixed;
   display: block;
   margin: -80px auto;
@@ -7,7 +7,7 @@
   object-fit: cover;
 }
 
-.Weather-app {
+.App .Weather-app {
   max-width: 600px;
   margin: 80px auto;
 }

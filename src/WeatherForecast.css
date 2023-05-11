@@ -8,6 +8,10 @@
 }
 
 .WeatherForecast .Forecast-temp-min {
-  opacity: 0.65;
+  opacity: 0.85;
   margin-left: 3px;
+}
+
+.WeatherForecast .Forecast-temp-max {
+  color: rgba(28, 28, 28, 1);
 }

@@ -6,25 +6,23 @@ import Weather from "./Weather";
 function App() {
   return (
     <div className="App">
-      <div className="Background-video">
-        <video autoPlay loop muted>
-          <source src={video} type="video/mp4" />
-        </video>
-        <div className="Weather-app">
-          <div className="container">
-            <Weather defaultCity="Ulsan" />
-            <footer>
-              This project was created by Ashley Blaine and is{" "}
-              <a
-                href="https://github.com/a-blaine/my-react-weather"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                open sourced
-              </a>{" "}
-              on GitHub
-            </footer>
-          </div>
+      <video autoPlay loop muted>
+        <source src={video} type="video/mp4" />
+      </video>
+      <div className="Weather-app">
+        <div className="container">
+          <Weather defaultCity="Ulsan" />
+          <footer>
+            This project was created by Ashley Blaine and is{" "}
+            <a
+              href="https://github.com/a-blaine/my-react-weather"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              open sourced
+            </a>{" "}
+            on GitHub
+          </footer>
         </div>
       </div>
     </div>
