@@ -7,7 +7,9 @@ import WeatherTemperature from "./WeatherTemperature";
 export default function WeatherInfo({ data }) {
   return (
     <div className="WeatherInfo">
-      <h1>{data.city}</h1>
+      <h1>
+        {data.city}, {data.country}
+      </h1>
       <ul>
         <li>
           <FormattedDate date={data.date} />
@@ -29,6 +31,7 @@ export default function WeatherInfo({ data }) {
           <ul>
             <li>Humidity: {data.humidity}%</li>
             <li>Wind: {data.wind} km/h</li>
+            <li>Feels like: {data.feelsLike}°</li>
           </ul>
         </div>
       </div>

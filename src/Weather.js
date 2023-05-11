@@ -10,14 +10,17 @@ export default function Weather({ defaultCity }) {
   const [city, setCity] = useState(defaultCity);
 
   function handleResponse(response) {
+    console.log(response.data);
     setWeatherData({
       ready: true,
       city: response.data.name,
+      country: response.data.sys.country,
       date: new Date(response.data.dt * 1000),
       description: response.data.weather[0].description,
       temperature: Math.round(response.data.main.temp),
       wind: Math.round(response.data.wind.speed),
       humidity: response.data.main.humidity,
+      feelsLike: Math.round(response.data.main.feels_like),
       icon: response.data.weather[0].icon,
       coordinates: response.data.coord,
     });
@@ -57,7 +60,7 @@ export default function Weather({ defaultCity }) {
               <input
                 type="submit"
                 value="Search"
-                className="btn btn-secondary w-100"
+                className="btn btn-secondary"
               />
             </div>
           </div>
