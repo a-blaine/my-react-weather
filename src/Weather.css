@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
 
 .Weather {
-  background: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.5);
   border: 1.5px solid #dadde1;
   color: rgb(60, 60, 60);
   font-family: Rubik, sans-serif;
