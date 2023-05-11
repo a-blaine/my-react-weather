@@ -57,11 +57,7 @@ export default function Weather({ defaultCity }) {
               />
             </div>
             <div className="col-2">
-              <input
-                type="submit"
-                value="Search"
-                className="btn btn-secondary"
-              />
+              <input type="submit" value="Search" className="btn btn-danger" />
             </div>
           </div>
         </form>
