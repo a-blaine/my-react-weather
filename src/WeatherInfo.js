@@ -1,4 +1,5 @@
 import React from "react";
+import "./WeatherInfo.css";
 import FormattedDate from "./FormattedDate";
 import WeatherIcon from "./WeatherIcon";
 import WeatherTemperature from "./WeatherTemperature";
@@ -13,7 +14,7 @@ export default function WeatherInfo({ data }) {
         </li>
         <li className="text-capitalize">{data.description}</li>
       </ul>
-      <div className="row mt-3 mb-3">
+      <div className="row mt-4 mb-3">
         <div className="col-6 ">
           <div className="d-flex">
             <div>

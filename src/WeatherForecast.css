@@ -4,7 +4,7 @@
 
 .WeatherForecast canvas {
   display: block;
-  margin: 10px auto;
+  margin: 14px auto;
 }
 
 .WeatherForecast .Forecast-temp-min {

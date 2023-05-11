@@ -1,7 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+
 .Weather {
   border: 1px solid #dadde1;
   color: rgb(135, 135, 135);
-  font-family: arial, sans-serif;
+  font-family: Rubik, sans-serif;
   border-radius: 4px;
   padding: 16px;
   margin: 30px auto;
@@ -24,12 +26,6 @@
   font-size: 16px;
   font-weight: 100;
   line-height: 19px;
-}
-
-.Weather canvas {
-  margin-top: 6px;
-  display: inline-block;
-  margin-right: 12px;
 }
 
 .Weather .temperature {
